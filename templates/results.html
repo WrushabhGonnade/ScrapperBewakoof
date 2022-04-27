@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rate Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Product Names and its Rates</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Product Name</th>
+         <th>Discounted Price</th>
+         <th>Actual Price</th>
+         <th>Price Difference</th>
+      </tr>
+         {% for i in data %}
+      <tr>
+
+         <td>{{i['Name']}}</td>
+         <td>{{i['Rate']}}</td>
+         <td>{{i['Price']}}</td>
+         <td>{{i['Diff']}}</td>
+
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>

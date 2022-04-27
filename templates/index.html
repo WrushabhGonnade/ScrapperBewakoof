@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="header">Bewakoof Web Scrapper</div>
+
+
+    <h1 style="text-align: center">Enter any product that you search on Bewakoof website, i.e Pant, Shirt, Tshirt etc...</h1>
+    <h1 style="text-align: center">Search</h1>
+
+    <div class="form">
+        <form action="/bewakoof" method="POST">
+            <label>Enter Product Name</label>
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+
+    <div class="header">Project By: Wrushabh N. Gonnade</div>
+
+    <a href="https://www.bewakoof.com/" target="_blank">Visit Official Bewakoof Website</a>
+</div>
+{% endblock %}
